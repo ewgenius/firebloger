@@ -40,6 +40,11 @@ class App extends React.Component {
     this.onChange(RichUtils.toggleInlineStyle(editorState, 'BOLD'));
   }
 
+  _onItalicClick() {
+    const {editorState} = this.state;
+    this.onChange(RichUtils.toggleInlineStyle(editorState, 'ITALIC'));
+  }
+
   render() {
     const {editorState} = this.state;
     return (
@@ -48,7 +53,7 @@ class App extends React.Component {
           <Toolbar className="toolbar">
             <ToolbarGroup float="left">
               <IconButton style={{marginTop: 4}} onClick={this._onBoldClick.bind(this)}><EditorFormatBold/></IconButton>
-              <IconButton style={{marginTop: 4}}><EditorFormatItalic/></IconButton>
+              <IconButton style={{marginTop: 4}} onClick={this._onItalicClick.bind(this)}><EditorFormatItalic/></IconButton>
               <IconButton style={{marginTop: 4}}><EditorFormatUnderlined/></IconButton>
               <IconButton style={{marginTop: 4}}><EditorFormatListBulleted/></IconButton>
               <IconButton style={{marginTop: 4}}><EditorFormatListNumbered/></IconButton>

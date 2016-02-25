@@ -4,5 +4,12 @@
 
   .content {
     padding: 16px;
+
+    .public-DraftEditor-content {
+      background-color: #fafafa;
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }
