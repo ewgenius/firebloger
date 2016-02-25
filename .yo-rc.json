@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "firebloger",
+    "style": "scss",
+    "postcss": false
+  }
+}
